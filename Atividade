@@ -1,0 +1,73 @@
+Crie um código que receba dois valores e a operação a ser realizada. Usando funções, some, subtraia, divide e multiplique os valores.
+
+# Código para somar dois valores
+def soma(a,b):
+  resultado = a + b
+  return resultado
+
+  # Função para subtrair dois valores
+def subtrai(a, b):
+    resultado = a - b
+    return resultado
+
+# Função para multiplicar dois valores
+def multiplica(a, b):
+    resultado = a * b
+    return resultado
+
+# Função para dividir dois valores
+def divide(a, b):
+    if b != 0:
+        resultado = a / b
+        return resultado
+    else:
+        return "Erro: divisão por zero!"
+
+def main():
+  print("-==Calculadora ==-")
+  valor1 = float(input("Digite um valor: "))
+  valor2 = float(input("Digite outro valor: "))
+  
+  operacao = input("Escolha a operação (soma, subtrai, divide, multiplica): ")
+
+  if operacao == "soma":
+    resultado = soma(valor1, valor2)
+  elif operacao == "subtrai":
+    resultado = subtrai(valor1, valor2)
+  elif operacao == "divide":
+    resultado = divide(valor1, valor2)
+  elif operacao == "multiplica":
+    resultado = multiplica(valor1, valor2)
+  else:
+        print("Operação inválida!")
+print("O resultado é", resultado)
+
+if __name__ == '__main__':
+    main()
+
+-----------------------------------------------------------------------------------------------------------------------------------
+
+
+Crie um código que realize a seleção de um número aleatório usando uma outra função criada por você. Crie uma outra função que inicialize as variáveis e outra função que imprima o valor aleatório.
+
+import random as rd
+
+def inicializar():
+  global numeroAleatorio
+  numeroAleatorio = 0
+
+def gerarNumero():
+  valor = rd.randint(0,1000)
+  return valor
+
+def imprimir(numero:int):
+  print("O número aleatório é: ", numero)
+
+def main():
+  global numeroAleatorio
+  inicializar()
+  numeroAleatorio = gerarNumero()
+  imprimir(numeroAleatorio)
+
+if __name__== '__main__':
+  main()
